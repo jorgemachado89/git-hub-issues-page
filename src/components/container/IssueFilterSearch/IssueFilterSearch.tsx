@@ -37,17 +37,17 @@ const FilterSearchIcon = styled.div`
 	color: rgb(149, 157, 165);
 	text-align: center;
 	pointer-events: none;
-    top: 9px;
+    top: 7px;
 	left: 8px;
 	width: 16px;
     height: 16px;
 `;
 
-export default function IssueFilterSearch() {
+export default function IssueFilterSearch({searchQuery = ""}: {searchQuery: string}) {
 	return (
 		<FilterWrapper>
 			<InputForm>
-				<Input value="is:open is:issue archived:false "/>
+				<Input defaultValue={searchQuery}/>
 				<FilterSearchIcon>
 					<InlineIcon icon={SearchIcon} />
 				</FilterSearchIcon>
