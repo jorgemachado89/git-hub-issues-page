@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { useSelector } from "react-redux";
 
+import { Reducers } from "./../../../store/types";
 import IssueListHeader from './../IssueListHeader/IssueListHeader';
+import RepositoryEntries from './../RepositoryEntries/RepositoryEntries';
 
 const ListContainer = styled.div`
 	margin-right: 0px;
@@ -14,18 +16,14 @@ const ListContainer = styled.div`
 	border-radius: 6px;
 `;
 
-type Repository = {
-
-};
-
-export default function IssueList({repositoriesList}: {repositoriesList: Repository[]}) {
-	const totalRepositoriesCount = useSelector((state: any) => {
-		return state.repositoriesReducer.repositories.length;
-	});
+export default function IssueList() {
+	const isLoading = useSelector((state: Reducers) => state.repositoriesReducer.isLoading);
+	const repositories = useSelector((state: Reducers) => state.repositoriesReducer.repositories);
 
 	return (
 		<ListContainer>
-			<IssueListHeader repositoriesCount={totalRepositoriesCount}/>
+			<IssueListHeader repositoriesCount={repositories.length} />
+			{isLoading ? <p>Is Loading...</p> : <RepositoryEntries repositories={repositories}/>}
 		</ListContainer>
 	);
 }

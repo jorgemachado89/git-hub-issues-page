@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from 'styled-components';
 
 import './App.css';
 
-import {Reducers} from './store/types';
 import {fetchRepositories} from './actions/repositoriesActions'
 
 import Header from './components/container/Header/Header';
@@ -33,8 +32,6 @@ const FiltersSection = styled.div`
 `;
 
 function App() {
-  const isLoading = useSelector((state: Reducers) => state.repositoriesReducer.isLoading);
-  const repositories = useSelector((state: Reducers) => state.repositoriesReducer.repositories);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -50,7 +47,7 @@ function App() {
             <IssueFilters />
             <IssueFilterSearch />
           </FiltersSection>
-          { isLoading ? <p>Is Loading...</p> : <IssueList repositoriesList={repositories}/> }
+          <IssueList/>
         </MainContainer>
       </main>
     </div>
