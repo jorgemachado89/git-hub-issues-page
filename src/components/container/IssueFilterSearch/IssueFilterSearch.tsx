@@ -14,10 +14,14 @@ const InputForm = styled.form`
 	margin-left: 16px;
 	margin-top: 0px;
 	position: relative;
+	width: 100%;
 `;
 
 const Input = styled.input`
 	width: 100%;
+	width: -moz-available;
+	width: -webkit-fill-available;
+	width: fill-available;
 	font-size: 14px;
 	line-height: 20px;
 	padding: 5px 12px;
