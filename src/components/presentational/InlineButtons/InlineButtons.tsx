@@ -49,7 +49,7 @@ export default function InlineButtons({ buttonsList, onButtonSelected, buttonSel
 	return (
 		<ButtonsInline>
 			{buttonsList.map((button: Button, index: number, array: Button[]) => {
-				let baseAttr = {
+				const baseAttr = {
 					key: uniqueKey(index),
 					onClick: onButtonSelected,
 					"data-name": button.label,
@@ -68,7 +68,6 @@ export default function InlineButtons({ buttonsList, onButtonSelected, buttonSel
 					return <Button {...htmlAttr}>{button.label}</Button>
 				}
 			})}
-
 		</ButtonsInline>
 	);
 };
