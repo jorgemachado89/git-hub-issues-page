@@ -11,7 +11,7 @@ import pt from 'javascript-time-ago/locale/pt';
 import en from 'javascript-time-ago/locale/en';
 
 import App from './App';
-import repositoriesReducer from "./store/repositoriesReducer";
+import repositoriesReducer from "./store/RepositoriesReducer";
 
 import './index.css';
 

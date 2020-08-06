@@ -19,6 +19,9 @@ const Button = styled.a<ISelectedBtn>`
 	color: ${props => props.isActive ? "#fff" : "#24292e" };
 	border: ${props => props.isActive ? "1px solid #005cc5" : "1px solid #e1e4e8" };
 	background-color: ${props => props.isActive ? "#0366d6" : null };
+	&&&:hover {
+		text-decoration: none;
+	}
 `;
 
 const LeftMostButton = styled(Button)`

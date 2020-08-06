@@ -6,10 +6,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/react-paginate": "^6.2.1",
     "axios": "^0.19.2",
     "octicons-react-ts": "^1.81.0",
     "react": "^16.13.1",
-    "react-burger-menu": "^2.7.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
     "react-scripts": "3.4.1",
@@ -46,6 +46,9 @@
     "@types/react-redux": "^7.1.9",
     "@types/react-timeago": "^4.1.1",
     "@types/styled-components": "^5.1.1",
+    "fetch-mock": "^9.10.6",
+    "node-fetch": "^2.6.0",
+    "redux-mock-store": "^1.5.4",
     "styled-components": "^5.1.1",
     "typescript": "^3.9.7"
   }

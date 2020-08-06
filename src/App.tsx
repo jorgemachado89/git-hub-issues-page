@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import './App.css';
 
-import {fetchRepositories} from './actions/repositoriesActions'
+import { fetchRepositories } from './actions/RepositoriesActions';
 
 import Header from './components/container/Header/Header';
 import IssueFilters from './components/container/IssueFilters/IssueFilters';
@@ -47,7 +47,7 @@ function App() {
             <IssueFilters />
             <IssueFilterSearch />
           </FiltersSection>
-          <IssueList/>
+          <IssueList />
         </MainContainer>
       </main>
     </div>

@@ -1,14 +1,15 @@
 import { Repository } from './../store/types';
+import { LOADING, FETCH_REPOSITORIES } from './types';
 
-const Loading = () => {
+export function loading() {
 	return {
-		type: "loadUserRepositories"
+		type: LOADING
 	};
 }
 
-const FetchedUserRepositories = (repositories: Repository[]) => {
+export function fetchedUserRepositories(repositories: Repository[] = []) {
 	return {
-		type: "loadUserRepositoriesDone",
+		type: FETCH_REPOSITORIES,
 		payload: repositories
 	};
 };
@@ -17,10 +18,10 @@ export function fetchRepositories() {
 	const GIT_HUB_REPOSITORIES = "https://api.github.com/users/jorgemachado89/repos";
 
 	return async (dispatch: Function) => {
-		dispatch(Loading());
+		dispatch(loading());
 		await fetch(GIT_HUB_REPOSITORIES)
 			.then((payload: any) => payload.json())
-			.then((repositories: Repository[]) => dispatch(FetchedUserRepositories(repositories)))
+			.then((repositories: Repository[]) => dispatch(fetchedUserRepositories(repositories)))
 			.catch((err: Error) => console.error(`Error in Fetch: ${err}`));
 	}
 }

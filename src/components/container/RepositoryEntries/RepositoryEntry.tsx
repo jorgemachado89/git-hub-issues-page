@@ -68,6 +68,7 @@ const Pill = styled(rightPaddedText)`
     line-height: 18px;
     border: 1px solid transparent;
     border-radius: 2em;
+    white-space: nowrap;
 `;
 
 const Details = styled.div`
