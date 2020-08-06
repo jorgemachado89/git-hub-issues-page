@@ -1,43 +1,38 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
+
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
 
 import { loading, fetchedUserRepositories, fetchRepositories } from './actions/RepositoriesActions';
+import repositoriesReducer from "./store/RepositoriesReducer";
 import { LOADING, FETCH_REPOSITORIES } from './actions/types';
 
 import App from './App';
 
 describe('Given that the App component is rendered', () => {
   describe('When the component is mounted', () => {
-    const middlewares = [thunk];
-    const mockStore = configureMockStore(middlewares);
     let store;
-    // let appComponent;
+    let appComponent;
 
     beforeEach(() => {
-      store = mockStore({
-        isLoading: false,
-        repositories: []
-      });
+      store = createStore(
+        combineReducers({ repositoriesReducer }),
+        applyMiddleware(thunk)
+      );
 
-      /* appComponent = renderer.create(
-        <Provider store={store}>
-          <App/>
-        </Provider>
-      ); */
-    });
-
-    it('Then it should fetch the repositories and update the store successfully', () => {
-      const appComponent = renderer.create(
+      appComponent = renderer.create(
         <Provider store={store}>
           <App/>
         </Provider>
       );
+    });
 
+    it('Then it should fetch the repositories and update the store successfully', () => {
       expect(appComponent.toJSON()).toMatchSnapshot();
     });
   });
