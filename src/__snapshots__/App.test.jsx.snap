@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given that the App component is rendered When the component is mounted Then it should fetch the repositories and update the store successfully 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="sc-AxjAm cjpDNH"
+  >
+    <div
+      className="sc-AxirZ hipxkS"
+    >
+      <a
+        className="sc-AxiKw kEhKeo"
+        href="http://localhost:3000"
+      >
+        <img
+          alt="GitHub icon"
+          className="sc-AxhCb ccMvAG"
+          src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"
+        />
+      </a>
+    </div>
+    <nav
+      className="sc-AxhUy kyjvtL"
+    >
+      <a
+        className="sc-AxgMl eyLnGt"
+        href="/"
+      >
+        Pulls
+      </a>
+      <a
+        className="sc-AxgMl eyLnGt"
+        href="/"
+      >
+        Issues
+      </a>
+      <a
+        className="sc-AxgMl eyLnGt"
+        href="/"
+      >
+        Marketplace
+      </a>
+      <a
+        className="sc-AxgMl eyLnGt"
+        href="/"
+      >
+        Explore
+      </a>
+    </nav>
+    <div
+      className="sc-AxheI hPSlft"
+    >
+      <svg
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path fill-rule=\\"evenodd\\" d=\\"M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5c.38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z\\" fill=\\"currentColor\\"/>",
+          }
+        }
+        focusable={false}
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        style={
+          Object {
+            "transform": "rotate(360deg)",
+            "verticalAlign": "-0.125em",
+          }
+        }
+        viewBox="0 0 15 16"
+        width="0.94em"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </header>
+  <main>
+    <div
+      className="sc-fzoXWK bZkwNg"
+    >
+      <div
+        className="sc-fzpmMD hLlCNR"
+      >
+        <nav
+          className="sc-Axmtr jgwsSp"
+        >
+          <a
+            className="sc-AxmLO sc-fzozJi kCXPjC"
+            data-name="Created"
+            onClick={[Function]}
+          >
+            Created
+          </a>
+          <a
+            className="sc-AxmLO ifzjcm"
+            data-name="Assigned"
+            onClick={[Function]}
+          >
+            Assigned
+          </a>
+          <a
+            className="sc-AxmLO sc-fzoLsD iuUMOI"
+            data-name="Mentioned"
+            onClick={[Function]}
+          >
+            Mentioned
+          </a>
+        </nav>
+        <div
+          className="sc-fzpans krGZzm"
+        >
+          <form
+            className="sc-fzplWN kbGFsR"
+          >
+            <input
+              className="sc-fznyAO qPHbA"
+              defaultValue=""
+            />
+            <svg
+              className="sc-fznKkj jHfVCw"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path fill-rule=\\"evenodd\\" d=\\"M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3c.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7c0-2.59 2.11-4.7 4.7-4.7c2.59 0 4.7 2.11 4.7 4.7c0 2.59-2.11 4.7-4.7 4.7z\\" fill=\\"currentColor\\"/>",
+                }
+              }
+              focusable={false}
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "transform": "rotate(360deg)",
+                  "verticalAlign": "-0.125em",
+                }
+              }
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </form>
+        </div>
+      </div>
+      <div
+        className="sc-fzoNJl gIXnAg"
+      >
+        <div
+          className="sc-fznZeY mABpi"
+        >
+          <div
+            className="sc-fzokOt bunKcL"
+          >
+            <div
+              className="sc-fzqNJr eJUeoa"
+            >
+              <svg
+                className="sc-fzqBZW dDFawW"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<path fill-rule=\\"evenodd\\" d=\\"M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7s7-3.14 7-7s-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z\\" fill=\\"currentColor\\"/>",
+                  }
+                }
+                focusable={false}
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "transform": "rotate(360deg)",
+                    "verticalAlign": "-0.125em",
+                  }
+                }
+                viewBox="0 0 14 16"
+                width="0.88em"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+              0
+              <span
+                className="sc-fzoyAV eXuvZg"
+              >
+                Repositories
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;

@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
