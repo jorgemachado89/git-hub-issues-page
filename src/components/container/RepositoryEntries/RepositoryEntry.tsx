@@ -78,6 +78,8 @@ const Details = styled.div`
 	color: #586069;
 `;
 
+const timeAgo = (time: string) => <ReactTimeAgo date={new Date(time)} locale={'en'}/>
+
 export default function RepositoryEntry(
 	{ name, description, created_at, updated_at, pushed_at, license, forks, open_issues, watchers, default_branch }: { 
 		name: string,
@@ -106,10 +108,9 @@ export default function RepositoryEntry(
 					</span>
 				</div>
 				<Details>
-					Created: <ReactTimeAgo date={new Date(created_at)} locale={'en'}/>, Updated: <ReactTimeAgo date={new Date(updated_at)} locale={'en'}/>, Pushed At: <ReactTimeAgo date={new Date(pushed_at)} locale={'en'}/>
+					Created: {timeAgo(created_at)}, Updated: {timeAgo(updated_at)}, Pushed At: {timeAgo(pushed_at)}
 				</Details>
 			</RepositoryEntryDetails>
-
 		</RepositoryEntryContainer>
 	);
 }

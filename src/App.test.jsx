@@ -72,7 +72,7 @@ describe('Given async methods that dispatch actions', () => {
     it('Then it should start loading, fetch repositories and stop loading', () => {
 
       fetchMock.getOnce("https://api.github.com/users/jorgemachado89/repos", {
-        body: { repositories: []},
+        body: { repositories: [] },
         headers: { 'content-type': 'application/json' }
       });
 
