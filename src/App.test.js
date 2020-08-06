@@ -1,21 +1,53 @@
+import React from 'react';
+import renderer from 'react-test-renderer';
+
+import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
 
-import {loading, fetchedUserRepositories, fetchRepositories} from './actions/';
+import { loading, fetchedUserRepositories, fetchRepositories } from './actions/RepositoriesActions';
 import { LOADING, FETCH_REPOSITORIES } from './actions/types';
 
+import App from './App';
 
-test('renders learn react link', () => {
-  expect(true).toEqual(true);
+describe('Given that the App component is rendered', () => {
+  describe('When the component is mounted', () => {
+    const middlewares = [thunk];
+    const mockStore = configureMockStore(middlewares);
+    let store;
+    // let appComponent;
+
+    beforeEach(() => {
+      store = mockStore({
+        isLoading: false,
+        repositories: []
+      });
+
+      /* appComponent = renderer.create(
+        <Provider store={store}>
+          <App/>
+        </Provider>
+      ); */
+    });
+
+    it('Then it should fetch the repositories and update the store successfully', () => {
+      const appComponent = renderer.create(
+        <Provider store={store}>
+          <App/>
+        </Provider>
+      );
+
+      expect(appComponent.toJSON()).toMatchSnapshot();
+    });
+  });
 });
-
 
 describe('Given that actions return types and payloads to dispatch', () => {
   describe('When Repositories are fetched', () => {
     it('Then it should load while fetching Repositories', () => {
       const LOADING_ACTION = {
-        type: "loadUserRepositories"
+        type: LOADING
       };
 
       expect(loading()).toEqual(LOADING_ACTION);
@@ -24,7 +56,7 @@ describe('Given that actions return types and payloads to dispatch', () => {
     
     it('Then it should store the fetched Repositories and after stop loading', () => {
       const FETCHED_USER_REPOSITORIES_ACTION = {
-        type: "loadUserRepositoriesDone",
+        type: FETCH_REPOSITORIES,
         payload: []
       };
 

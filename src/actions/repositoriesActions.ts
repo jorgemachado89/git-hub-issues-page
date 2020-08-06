@@ -1,4 +1,4 @@
-import { Repository } from './../store/types';
+import { Repository } from '../store/types';
 import { LOADING, FETCH_REPOSITORIES } from './types';
 
 export function loading() {
